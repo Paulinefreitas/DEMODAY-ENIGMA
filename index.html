@@ -41,106 +41,117 @@
   </header>
 
   <section class="fontSize3">
-       <div class="container-sobre">
+    <div class="container-sobre">
       <p class="description">Criar senhas seguras é fundamental para proteger seus dados.
-        Foi pensando nisso que desenvolvemos o <strong>Safe</strong>, um sistema de criptografia 
+        Foi pensando nisso que desenvolvemos o <strong>Safe</strong>, um sistema de criptografia
         que gera senhas originais de forma rápida e fácil!
       </p>
     </div>
   </section>
-  <div>
+  <div class="image4-container">
     <img class="image" src="Image/Image4.jpeg">
   </div>
 
   <div id="faça-sua-senha" class="fontSize3 createPassword">
     <h2> FAÇA SUA SENHA </h2>
-    <p class="description"> Siga os passos a seguir:</p>
-    <p class="description"> Escreva uma mensagem/palavra escolhida; </p>
-    <p class="description"> Escolha um número de chave; </p>
-    <p class="description"> Clique em criptografar; </p>
-    <p class="description"> Aparecerá um código em letras criptografadas. </p>
-  
+    <div class="instructions-box">
+      <p class="description"> Siga os passos a seguir:</p>
+      <p class="description"> Escreva uma mensagem/palavra escolhida; </p>
+      <p class="description"> Escolha um número de chave; </p>
+      <p class="description"> Clique em criptografar; </p>
+      <p class="description"> Aparecerá um código em letras criptografadas. </p>
+    </div>
+
     <form>
-        <textarea id="cod" name="cipher" type="text" class="formField" placeholder="Insira a mensagem escolhida"></textarea>
-      
-        <input id="offset" type="number" class="formField" name="offset" placeholder="Nº de chave">
-      
+      <textarea id="cod" name="cipher" type="text" class="formField"
+        placeholder="Insira a mensagem escolhida"></textarea>
+
+      <input id="offset" type="number" class="formField" name="offset" placeholder="Nº de chave">
+
+      <div class="copyBtn-container">
         <textarea id="encod" name="cipher" class="formField" type="text" placeholder="Senha criptografada"></textarea>
-  
-        <div class="botoesBox">
-          <button id="crypt" type="submit" class="btnCreatePassword" onclick="encode()">Criptografar</button>
-          <button id="decrypt" type="submit" class="btnCreatePassword" onclick="decode()">Descriptografar</button>
-          <button id="copyButton" class="btn">Copiar</button>
-        </div>
-    </form>
-      <section id="ajuda" class="fontSize3">
-        <h2 class="titleHelp">Ajuda</h2>
-        <h3 class="titleQuestions">Perguntas Frequentes</h3>
+        <button id="copyButton" class="btn">Copiar</button>
+      </div>
 
-        <div class='question'>
-          <input type='checkbox' id='question-1'>
-          <label class="perguntas" for='question-1'>É seguro?</label>
-          <div class='answer'>
-            Sim é seguro, o objetivo do nosso site é que você tenha acesso
-            seguro e individual para gerar suas senhas personalizadas e
-            utilizá-las simultaneamente.
-          </div>
-        </div>
-
-        <div class='question'>
-          <input type='checkbox' id='question-2'>
-          <label for='question-2'>Consigo recuperar a minha senha caso eu perca?</label>
-          <div class='answer'>
-            Não, o intuito do nosso sistema é para que os nossos usuários
-            possam gerar sua senha criptografada sem precisar armazenar as
-            informações no nosso site.
-          </div>
-        </div>
-
-        <div class='question'>
-          <input type='checkbox' id='question-3'>
-          <label for='question-3'>Posso gerar mais de uma senha?</label>
-          <div class='answer'>
-            sim, você pode gerar quantas senhas preferir.
-          </div>
-        </div>
-
-        <div class='question'>
-          <input type='checkbox' id='question-4'>
-          <label for='question-4'>Para que serve a criptografia?</label>
-          <div class='answer'>
-            A criptografia tem dois propósitos principais o primeiro é impedir
-            que dados armazenados sejam lidos e permitir que dados sejam
-            transmitidos de forma segura por um canal inseguro.
-          </div>
-        </div>
-        <div class='question'>
-          <input type='checkbox' id='question-5'>
-          <label for='question-5'>Como posso codificar e descodificar?</label>
-          <div class='answer'>
-            Você pode codificar uma mensagem simplesmente trocando cada letra
-            da mensagem presente no alfabeto padrão pela sua equivalente no
-            alfabeto cifrado. A decodificação é justamento o processo inverso.
-          </div>
-        </div>
-      </section>
+      <div class="botoesBox">
+        <button id="crypt" type="submit" class="btnCreatePassword" onclick="encode()">Criptografar</button>
+        <button id="decrypt" type="submit" class="btnCreatePassword" onclick="decode()">Descriptografar</button>
+      </div>
     </form>
   </div>
+
+  <section id="ajuda" class="fontSize3">
+    <h2 class="titleHelp">Ajuda</h2>
+    <h3 class="titleQuestions">Perguntas Frequentes</h3>
+    <div class="ajuda">
+      <div class="question" id="firstQuestion">
+        <input type="checkbox" id="question-1">
+        <label class="perguntas" for="question-1">É seguro?</label>
+        <div class="answer">
+          Sim é seguro, o objetivo do nosso site é que você tenha acesso
+          seguro e individual para gerar suas senhas personalizadas e
+          utilizá-las simultaneamente.
+        </div>
+      </div>
+
+      <div class="question">
+        <input type="checkbox" id="question-2">
+        <label for="question-2">Consigo recuperar a minha senha caso eu perca?</label>
+        <div class="answer">
+          Não, o intuito do nosso sistema é para que os nossos usuários
+          possam gerar sua senha criptografada sem precisar armazenar as
+          informações no nosso site, mas você pode codificar a mesma palavra com a mesma chave e obter a senha perdida.
+        </div>
+      </div>
+
+      <div class="question">
+        <input type="checkbox" id="question-3">
+        <label for="question-3">Posso gerar mais de uma senha?</label>
+        <div class="answer">
+          Sim, você pode gerar quantas senhas preferir.
+        </div>
+      </div>
+
+      <div class="question">
+        <input type="checkbox" id="question-4">
+        <label for="question-4">Para que serve a criptografia?</label>
+        <div class="answer">
+          A criptografia tem dois propósitos principais o primeiro é impedir
+          que dados armazenados sejam lidos e o segundo é permitir que dados sejam
+          transmitidos de forma segura por um canal inseguro.
+        </div>
+      </div>
+
+      <div class="question">
+        <input type="checkbox" id="question-5">
+        <label for="question-5">Como posso codificar e descodificar?</label>
+        <div class="answer">
+          Você pode codificar uma mensagem simplesmente trocando cada letra
+          da mensagem presente no alfabeto padrão pela sua equivalente no
+          alfabeto cifrado. A decodificação é justamento o processo inverso.
+        </div>
+      </div>
+
+      <div class="question last">
+        <input type="checkbox" id="question-6">
+        <label for="question-6" id="chave">O que é a chave?</label>
+        <div class="answer">
+          <p>
+            A chave é um número usado para criar sua senha. Você deve guardar-lo para
+            codificar ou decodificar sua senha posteriormente.
+            Nós não guardamos essa informação em lugar nenhum.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
   <div>
-    <img class="" src="Image/Image12.jpeg" style="width:100%">
+    <img class="lastImage" src="Image/Image12.jpeg">
   </div>
-  <footer class="footer">
-      <ul>
-        <li class="contato-equipe">
-         SAFE         
-        </li>
-        <li class="contato-equipe">
-          CONTATO
-        </li>
-      </ul>
 
-    </nav>
-  </footer>
+
+
 
   <script src="index.js" type="module"></script>
   <script src="https://kit.fontawesome.com/c8595f672e.js" crossorigin="anonymous"></script>

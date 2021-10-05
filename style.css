@@ -1,16 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@700&display=swap');
-
-
 * {
   margin: 0;
-  /*padding: 2;*/
   box-sizing: border-box;
   font-family: Gill Sans, sans-serif;
 }
 
 body {
-  font-size: 50px;
   text-align: justify;
 }
 
@@ -32,60 +26,51 @@ h2 {
   font-size: 4rem;
   text-align: center;
   text-decoration: underline;
-  text-decoration-color: #0c2345;;
   text-decoration-thickness: 5px;
-  font-family: Gill Sans, sans-serif;
   margin-bottom: 1rem;
   background-color: #adbdbe;
   padding: 5px;
 }
 
 h3 {
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
 }
 
 #titulo {
-  background-color: #fff; 
-  font-family: Gill Sans, sans-serif;
+  background-color: #fff;
   color: #0c2345;
   font-size: 6rem;
   text-transform: uppercase;
   text-align: center;
 }
 
-.image {
-  margin-left: 25%;
-}  
+.image4-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  overflow: hidden
+}
 
 #menu {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  font-family: sans-serif;
   font-size: 2rem;
-  background-color:#adbdbe;
+  background-color: #adbdbe;
   color: #0c2345;
   height: 80px;
-}
-
-.convite{
-  font: #18606f;
-  text-align: center ;
-  font-size: 2rem;
-}
-
-.container-sobre {
-  margin-left: 15px;
-  margin-right: 15px;
-  background-color: #fff;
 }
 
 .description {
   font-size: 3rem;
   font-family: 'Andika New Basic', sans-serif;
-  background-color: white;
-  border-radius: 10px;
+}
+
+.instructions-box {
+  width: 95%;
+  margin: auto;
 }
 
 #li {
@@ -106,30 +91,40 @@ h3 {
   color: #0c2345;
 }
 
-.question {
-border-bottom: 1px solid #b39592;;
-padding: 10px 0
+.titleQuestions,
+.createPassword h2 {
+  margin-bottom: 30px;
 }
 
-.question input,
-.question .answer { display: none }
+.question {
+  border-bottom: 1px solid #836e6c;
+  padding: 10px 0
+}
+
+.question input, .question .answer {
+  display: none
+}
 
 .question label {
-  display: inline-block;
   font-weight: bold;
   margin-bottom: 5px;
   width: 100%;
-  font-size: 35px;
+  font-size: 2.5rem;
 }
 
-.question input:checked ~ .answer {
+.question input:checked~.answer {
   display: block
 }
 
-#ajuda { 
+#ajuda {
   background: linear-gradient(to top, #959797, #adbdbe, #fff);
-  margin: 0px; 
-  padding: 0px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.ajuda {
+  margin: auto;
+  width: 95%;
 }
 
 .menuLink {
@@ -141,70 +136,44 @@ padding: 10px 0
 }
 
 .menuLink:hover {
-color:#973427;
+  color: #973427;
 }
 
 .answer {
-  font-size: 24px;
+  font-size: 2rem;
 }
 
-
 .container-sobre {
-  margin-left: 15px;
-  margin-right: 15px;
-  background-color: #fff;
+  width: 95%;
+  margin: 25px auto auto auto;
 }
 
 #intro {
   position: absolute;
   top: 400px;
-  color:aliceblue;
+  color: aliceblue;
   text-align: center;
   font-weight: 700;
-  font-family: sans-serif;
   display: flex;
-  justify-content: center ;
+  justify-content: center;
   flex-wrap: wrap;
   background-color: rgba(43, 42, 42, 0);
   width: 80%;
   left: 90px;
-}
-
-
-.footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #adbdbe;
-  color: black;
-  text-align: center;
-}
-
-.contato-equipe {
-  display: inline-flex;
-  margin-left: 20px;
-  font-size: 30px;
-  font-weight: bold;
-  color: #0c2345;
-}
-
-.socialMedia {
-  display: inline-flex;
-  text-decoration: none;
-  text-align: center;
-  margin: -12px;
-  color: #ffff;
-  padding: 14px 16px;
+  letter-spacing: 2px;
+  font-size: 50px;
 }
 
 textarea, input {
   width: 60%;
-  height: 4rem;
+  height: 6rem;
   border-radius: 5px;
   border: 3px solid #0c2345;
   margin: 1rem auto;
-  font-size: 2rem;
+  font-size: 2.5rem;
   background-color: #adbdbe;
+  padding-left: 15px;
+  line-height: 6rem;
 }
 
 .botoes {
@@ -213,9 +182,9 @@ textarea, input {
 }
 
 .btnCreatePassword {
-  width: 350px;
+  width: 400px;
   height: 5rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-top: 2rem;
   border: none;
   background-color: #18606f;
@@ -225,33 +194,66 @@ textarea, input {
   margin-right: 20px;
 }
 
+.btnCreatePassword:hover {
+  background-color: #11262b;
+}
+
 form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 3rem auto;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 #decrypt {
-  background-color: #9a857d;
+  background-color: #b33e2e;
   color: black;
 }
 
-.createPassword {
-  position: relative;
+#decrypt:hover {
+  background-color: #9a857d;
 }
 
+#encod {
+  width: 100%;
+}
+
+.copyBtn-container {
+  position: relative;
+  width: 60%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+  box-sizing: content-box;
+}
 
 #copyButton {
-  height: 5rem;
+  height: 6rem;
   font-size: 2rem;
   border: none;
-  background-color: #18606f;
-  border-radius: 50px;
+  width: 9rem;
   font-weight: bolder;
-  color: #adbdbe;
-  margin-right: 20px;
+  letter-spacing: 1px;
+  border-radius: 5px;
   position: absolute;
-  top: 1030px;
-  right: 20px;
+  top: 14px;
+  right: -10rem;
+  background-color: #867d81;
+}
+
+#copyButton:hover {
+  background-color: rgb(219, 200, 150);
+}
+
+.lastImage {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  margin: auto;
+}
+
+.question.last {
+  border-bottom: none;
 }
